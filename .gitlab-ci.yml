@@ -1,15 +1,23 @@
 
 # build step
+stages:
+    - build
+    - test
+    - deploy
+
 build-job:
+    stage: build
     script:
         - echo "First step"
         - echo "Second Job"
         
 Test-job:
+    stage: test
     script:
         - echo "this is from test job"
 
 deploy-job:
+    stage: deploy
     script:
         - echo "This is deploy"        
 
