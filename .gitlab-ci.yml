@@ -5,8 +5,15 @@ stages:
     - test
     - deploy
 
+before_script:
+    # this is global scope means it will run before each job runs
+    - echo "Before script"
+after_script:
+    - echo "this is after script"     
 build-job:
     stage: build
+    before_script:
+        - echo "this before script from build job"
     script:
         - echo "First step"
         - echo "Second Job"
