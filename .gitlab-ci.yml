@@ -29,6 +29,8 @@ deploy-job:
     stage: deploy
     script:
         - echo "This is deploy" 
-#Another-job:
- #   stage: Another Step               
+Another-job:
+    stage: Another Step
+    script:
+        - echo "this is from testingMr branch"               
 
