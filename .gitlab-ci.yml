@@ -6,6 +6,7 @@ stages:
     - test
     - deploy
     - Another Step
+    - checking git lab mirroring
 
 before_script:
     # this is global scope means it will run before each job runs
@@ -32,5 +33,9 @@ deploy-job:
 Another-job:
     stage: Another Step
     script:
-        - echo "this is from testingMr branch"               
+        - echo "this is from testingMr branch"
+Another-job:
+    stage: checking git lab mirroring
+    script:
+        - echo "this is to practie git lab mirroring."                       
 
