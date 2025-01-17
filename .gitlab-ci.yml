@@ -1,0 +1,42 @@
+
+#PAT glpat-YzoxCm86MQp1OmV1aGl3DEJPTMVUUsYdo3sL1FiwjxA.170emoth3
+# build step
+stages:
+    - build
+    - test
+    - deploy
+    - Another Step
+    - checking git lab mirroring
+    - test
+
+before_script:
+    # this is global scope means it will run before each job runs
+    - echo "Before script"
+after_script:
+    - echo "this is after script"     
+build-job:
+    stage: build
+    before_script:
+        - echo "this before script from build job"
+    script:
+        - echo "First step"
+        - echo "Second Job"
+        
+Test-job:
+    stage: test
+    script:
+        - echo "this is from test job"
+
+deploy-job:
+    stage: deploy
+    script:
+        - echo "This is deploy" 
+Another-job:
+    stage: Another Step
+    script:
+        - echo "this is from testingMr branch"
+Another-job:
+    stage: checking git lab mirroring
+    script:
+        - echo "this is to practie git lab mirroring."                       
+
